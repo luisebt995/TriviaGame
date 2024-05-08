@@ -11,6 +11,9 @@
 		A074E6602BE92B7A006695BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074E65F2BE92B7A006695BC /* ContentView.swift */; };
 		A074E6622BE92B7E006695BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A074E6612BE92B7E006695BC /* Assets.xcassets */; };
 		A074E6652BE92B7E006695BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A074E6642BE92B7E006695BC /* Preview Assets.xcassets */; };
+		A074E66C2BE92C5B006695BC /* ModelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074E66B2BE92C5B006695BC /* ModelAPI.swift */; };
+		A074E66E2BE92DCC006695BC /* ViewModelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074E66D2BE92DCC006695BC /* ViewModelAPI.swift */; };
+		A074E6702BE92DE3006695BC /* ViewAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074E66F2BE92DE3006695BC /* ViewAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		A074E65F2BE92B7A006695BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A074E6612BE92B7E006695BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A074E6642BE92B7E006695BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A074E66B2BE92C5B006695BC /* ModelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelAPI.swift; sourceTree = "<group>"; };
+		A074E66D2BE92DCC006695BC /* ViewModelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelAPI.swift; sourceTree = "<group>"; };
+		A074E66F2BE92DE3006695BC /* ViewAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,9 @@
 				A074E65F2BE92B7A006695BC /* ContentView.swift */,
 				A074E6612BE92B7E006695BC /* Assets.xcassets */,
 				A074E6632BE92B7E006695BC /* Preview Content */,
+				A074E66B2BE92C5B006695BC /* ModelAPI.swift */,
+				A074E66D2BE92DCC006695BC /* ViewModelAPI.swift */,
+				A074E66F2BE92DE3006695BC /* ViewAPI.swift */,
 			);
 			path = TriviaGame;
 			sourceTree = "<group>";
@@ -137,8 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A074E66C2BE92C5B006695BC /* ModelAPI.swift in Sources */,
+				A074E6702BE92DE3006695BC /* ViewAPI.swift in Sources */,
 				A074E6602BE92B7A006695BC /* ContentView.swift in Sources */,
 				A074E65E2BE92B7A006695BC /* TriviaGameApp.swift in Sources */,
+				A074E66E2BE92DCC006695BC /* ViewModelAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
