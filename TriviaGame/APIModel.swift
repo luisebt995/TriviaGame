@@ -7,6 +7,7 @@
 //  Bibliography:
 //  https://github.com/luisebt995/APIExample
 //  https://www.hackingwithswift.com/forums/swiftui/text-formatting/3796
+//  Mastering SwiftUI - Chapter 15
 
 import Foundation
 

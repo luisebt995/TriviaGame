@@ -7,24 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A00722062BED0E3600D07287 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00722052BED0E3600D07287 /* ResetPasswordView.swift */; };
+		A02DD72A2BEBDC14008A8893 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02DD7292BEBDC14008A8893 /* AuthViewModel.swift */; };
+		A02DD72E2BEBE01E008A8893 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A02DD72D2BEBE01E008A8893 /* FirebaseAuth */; };
+		A02DD7302BEBE01E008A8893 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A02DD72F2BEBE01E008A8893 /* FirebaseFirestore */; };
+		A02DD7322BEBE01E008A8893 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A02DD7312BEBE01E008A8893 /* FirebaseFirestoreSwift */; };
+		A02DD7342BEBE433008A8893 /* HolderAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02DD7332BEBE433008A8893 /* HolderAuthView.swift */; };
+		A02DD7362BEBE462008A8893 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02DD7352BEBE462008A8893 /* SignUpView.swift */; };
+		A02DD7382BEBF23F008A8893 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A02DD7372BEBF23E008A8893 /* GoogleService-Info.plist */; };
 		A074E65E2BE92B7A006695BC /* TriviaGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074E65D2BE92B7A006695BC /* TriviaGameApp.swift */; };
 		A074E6602BE92B7A006695BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074E65F2BE92B7A006695BC /* ContentView.swift */; };
 		A074E6622BE92B7E006695BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A074E6612BE92B7E006695BC /* Assets.xcassets */; };
 		A074E6652BE92B7E006695BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A074E6642BE92B7E006695BC /* Preview Assets.xcassets */; };
-		A074E66C2BE92C5B006695BC /* ModelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074E66B2BE92C5B006695BC /* ModelAPI.swift */; };
-		A074E66E2BE92DCC006695BC /* ViewModelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074E66D2BE92DCC006695BC /* ViewModelAPI.swift */; };
-		A074E6702BE92DE3006695BC /* ViewAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074E66F2BE92DE3006695BC /* ViewAPI.swift */; };
+		A074E66C2BE92C5B006695BC /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074E66B2BE92C5B006695BC /* APIModel.swift */; };
+		A074E66E2BE92DCC006695BC /* APIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074E66D2BE92DCC006695BC /* APIViewModel.swift */; };
+		A074E6702BE92DE3006695BC /* APIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074E66F2BE92DE3006695BC /* APIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A00722052BED0E3600D07287 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
+		A02DD7292BEBDC14008A8893 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		A02DD7332BEBE433008A8893 /* HolderAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolderAuthView.swift; sourceTree = "<group>"; };
+		A02DD7352BEBE462008A8893 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		A02DD7372BEBF23E008A8893 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A074E65A2BE92B7A006695BC /* TriviaGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriviaGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A074E65D2BE92B7A006695BC /* TriviaGameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaGameApp.swift; sourceTree = "<group>"; };
 		A074E65F2BE92B7A006695BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A074E6612BE92B7E006695BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A074E6642BE92B7E006695BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A074E66B2BE92C5B006695BC /* ModelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelAPI.swift; sourceTree = "<group>"; };
-		A074E66D2BE92DCC006695BC /* ViewModelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelAPI.swift; sourceTree = "<group>"; };
-		A074E66F2BE92DE3006695BC /* ViewAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAPI.swift; sourceTree = "<group>"; };
+		A074E66B2BE92C5B006695BC /* APIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
+		A074E66D2BE92DCC006695BC /* APIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIViewModel.swift; sourceTree = "<group>"; };
+		A074E66F2BE92DE3006695BC /* APIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +45,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A02DD72E2BEBE01E008A8893 /* FirebaseAuth in Frameworks */,
+				A02DD7302BEBE01E008A8893 /* FirebaseFirestore in Frameworks */,
+				A02DD7322BEBE01E008A8893 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,13 +73,18 @@
 		A074E65C2BE92B7A006695BC /* TriviaGame */ = {
 			isa = PBXGroup;
 			children = (
+				A02DD7292BEBDC14008A8893 /* AuthViewModel.swift */,
+				A02DD7352BEBE462008A8893 /* SignUpView.swift */,
+				A00722052BED0E3600D07287 /* ResetPasswordView.swift */,
+				A02DD7332BEBE433008A8893 /* HolderAuthView.swift */,
+				A074E66B2BE92C5B006695BC /* APIModel.swift */,
+				A074E66D2BE92DCC006695BC /* APIViewModel.swift */,
+				A074E66F2BE92DE3006695BC /* APIView.swift */,
+				A02DD7372BEBF23E008A8893 /* GoogleService-Info.plist */,
 				A074E65D2BE92B7A006695BC /* TriviaGameApp.swift */,
 				A074E65F2BE92B7A006695BC /* ContentView.swift */,
 				A074E6612BE92B7E006695BC /* Assets.xcassets */,
 				A074E6632BE92B7E006695BC /* Preview Content */,
-				A074E66B2BE92C5B006695BC /* ModelAPI.swift */,
-				A074E66D2BE92DCC006695BC /* ViewModelAPI.swift */,
-				A074E66F2BE92DE3006695BC /* ViewAPI.swift */,
 			);
 			path = TriviaGame;
 			sourceTree = "<group>";
@@ -92,6 +113,11 @@
 			dependencies = (
 			);
 			name = TriviaGame;
+			packageProductDependencies = (
+				A02DD72D2BEBE01E008A8893 /* FirebaseAuth */,
+				A02DD72F2BEBE01E008A8893 /* FirebaseFirestore */,
+				A02DD7312BEBE01E008A8893 /* FirebaseFirestoreSwift */,
+			);
 			productName = TriviaGame;
 			productReference = A074E65A2BE92B7A006695BC /* TriviaGame.app */;
 			productType = "com.apple.product-type.application";
@@ -120,6 +146,9 @@
 				Base,
 			);
 			mainGroup = A074E6512BE92B7A006695BC;
+			packageReferences = (
+				A02DD72C2BEBE01E008A8893 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = A074E65B2BE92B7A006695BC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -136,6 +165,7 @@
 			files = (
 				A074E6652BE92B7E006695BC /* Preview Assets.xcassets in Resources */,
 				A074E6622BE92B7E006695BC /* Assets.xcassets in Resources */,
+				A02DD7382BEBF23F008A8893 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,11 +176,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A074E66C2BE92C5B006695BC /* ModelAPI.swift in Sources */,
-				A074E6702BE92DE3006695BC /* ViewAPI.swift in Sources */,
+				A02DD72A2BEBDC14008A8893 /* AuthViewModel.swift in Sources */,
+				A074E66C2BE92C5B006695BC /* APIModel.swift in Sources */,
+				A074E6702BE92DE3006695BC /* APIView.swift in Sources */,
 				A074E6602BE92B7A006695BC /* ContentView.swift in Sources */,
+				A02DD7362BEBE462008A8893 /* SignUpView.swift in Sources */,
 				A074E65E2BE92B7A006695BC /* TriviaGameApp.swift in Sources */,
-				A074E66E2BE92DCC006695BC /* ViewModelAPI.swift in Sources */,
+				A074E66E2BE92DCC006695BC /* APIViewModel.swift in Sources */,
+				A02DD7342BEBE433008A8893 /* HolderAuthView.swift in Sources */,
+				A00722062BED0E3600D07287 /* ResetPasswordView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +326,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = LuisSA.TriviaGame;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appcoda.TriviaGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -321,7 +355,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = LuisSA.TriviaGame;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appcoda.TriviaGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -351,6 +385,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A02DD72C2BEBE01E008A8893 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A02DD72D2BEBE01E008A8893 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A02DD72C2BEBE01E008A8893 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		A02DD72F2BEBE01E008A8893 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A02DD72C2BEBE01E008A8893 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		A02DD7312BEBE01E008A8893 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A02DD72C2BEBE01E008A8893 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A074E6522BE92B7A006695BC /* Project object */;
 }

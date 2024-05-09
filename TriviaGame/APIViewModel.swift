@@ -13,7 +13,7 @@ import Foundation
 import Combine
 
 //ViewModel Basic Structure
-class ViewModelAPI : ObservableObject {
+class APIViewModel : ObservableObject {
     //Input
     @Published var questions : DataAPI?
     @Published var index : Int = -1
@@ -50,7 +50,7 @@ class ViewModelAPI : ObservableObject {
             .receive(on: RunLoop.main)
             .map { index in
                 if let category = self.questions?.results[index].category {
-                    return category
+                    return category.decoded
                 }
                 else{ return ""}
             }

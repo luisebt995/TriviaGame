@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyByPj5mk-p7KvAay0yhaXvVufqtvGBzorM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>974723503615</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.appcoda.TriviaGame</string>
+	<key>PROJECT_ID</key>
+	<string>triviagame-fbd23</string>
+	<key>STORAGE_BUCKET</key>
+	<string>triviagame-fbd23.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:974723503615:ios:87658200d41edf7dadc3ca</string>
+</dict>
+</plist>
