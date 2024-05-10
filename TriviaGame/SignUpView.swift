@@ -7,6 +7,7 @@
 //  Bibliography:
 //  Swift UI Firebase - Chapter 4
 //  Mastering SwiftUI - Chapter 12
+//  https://firebase.google.com/docs/auth/ios/google-signin?hl=es
 
 import SwiftUI
 
@@ -45,6 +46,13 @@ struct SignUpView: View {
                         authModel.signIn(emailAddress: emailAddress, password: password)
                     }) {
                         Text("Sign In")
+                    }
+                }
+                Section(header: Text("If you already have an account with Google:")) {
+                    Button(action: {
+                        authModel.signInWithGoogle()
+                    }) {
+                        Text("Sign In with Google")
                     }
                 }
             }.navigationTitle("Welcome")

@@ -4,6 +4,9 @@
 //
 //  Created by Luis on 9/5/24.
 //
+//  Bibliography:
+//  Swift UI Firebase - Chapter 3
+//  Swift UI Firebase - Chapter 4
 
 import SwiftUI
 
@@ -72,7 +75,7 @@ struct DDBBView: View {
                     
                 })
                 {
-                    Text("Save now")
+                    Text("Modify")
                 }
                 //.disabled(self.corrects > 0 && self.incorrects > 0 && self.ratio > 0.0)
                 .foregroundColor(.yellow)

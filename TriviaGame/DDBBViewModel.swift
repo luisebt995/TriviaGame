@@ -6,6 +6,7 @@
 //
 //  Bibliography:
 //  Swift UI Firebase - Chapter 3
+//  Swift UI Firebase - Chapter 4
 
 import SwiftUI
 import FirebaseFirestore

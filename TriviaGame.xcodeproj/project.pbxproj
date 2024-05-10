@@ -11,13 +11,17 @@
 		A007220C2BED20C400D07287 /* DDBBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A007220B2BED20C400D07287 /* DDBBModel.swift */; };
 		A007220E2BED224C00D07287 /* DDBBViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A007220D2BED224C00D07287 /* DDBBViewModel.swift */; };
 		A00722102BED24E400D07287 /* DDBBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A007220F2BED24E400D07287 /* DDBBView.swift */; };
+		A01DCC562BEE813800394206 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = A01DCC552BEE813800394206 /* GoogleSignIn */; };
+		A01DCC582BEE813800394206 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A01DCC572BEE813800394206 /* GoogleSignInSwift */; };
+		A01DCC5A2BEE820200394206 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A01DCC592BEE820200394206 /* GoogleService-Info.plist */; };
+		A01DCC5D2BEE844100394206 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01DCC5C2BEE844100394206 /* AuthModel.swift */; };
 		A02DD72A2BEBDC14008A8893 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02DD7292BEBDC14008A8893 /* AuthViewModel.swift */; };
 		A02DD72E2BEBE01E008A8893 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A02DD72D2BEBE01E008A8893 /* FirebaseAuth */; };
 		A02DD7302BEBE01E008A8893 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A02DD72F2BEBE01E008A8893 /* FirebaseFirestore */; };
 		A02DD7322BEBE01E008A8893 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A02DD7312BEBE01E008A8893 /* FirebaseFirestoreSwift */; };
 		A02DD7342BEBE433008A8893 /* HolderAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02DD7332BEBE433008A8893 /* HolderAuthView.swift */; };
 		A02DD7362BEBE462008A8893 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02DD7352BEBE462008A8893 /* SignUpView.swift */; };
-		A02DD7382BEBF23F008A8893 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A02DD7372BEBF23E008A8893 /* GoogleService-Info.plist */; };
+		A02DD7382BEBF23F008A8893 /* GoogleService-Info-old.plist in Resources */ = {isa = PBXBuildFile; fileRef = A02DD7372BEBF23E008A8893 /* GoogleService-Info-old.plist */; };
 		A074E65E2BE92B7A006695BC /* TriviaGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074E65D2BE92B7A006695BC /* TriviaGameApp.swift */; };
 		A074E6602BE92B7A006695BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074E65F2BE92B7A006695BC /* ContentView.swift */; };
 		A074E6622BE92B7E006695BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A074E6612BE92B7E006695BC /* Assets.xcassets */; };
@@ -32,10 +36,13 @@
 		A007220B2BED20C400D07287 /* DDBBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDBBModel.swift; sourceTree = "<group>"; };
 		A007220D2BED224C00D07287 /* DDBBViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDBBViewModel.swift; sourceTree = "<group>"; };
 		A007220F2BED24E400D07287 /* DDBBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDBBView.swift; sourceTree = "<group>"; };
+		A01DCC592BEE820200394206 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A01DCC5B2BEE825400394206 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A01DCC5C2BEE844100394206 /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 		A02DD7292BEBDC14008A8893 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		A02DD7332BEBE433008A8893 /* HolderAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolderAuthView.swift; sourceTree = "<group>"; };
 		A02DD7352BEBE462008A8893 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-		A02DD7372BEBF23E008A8893 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A02DD7372BEBF23E008A8893 /* GoogleService-Info-old.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-old.plist"; sourceTree = "<group>"; };
 		A074E65A2BE92B7A006695BC /* TriviaGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriviaGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A074E65D2BE92B7A006695BC /* TriviaGameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaGameApp.swift; sourceTree = "<group>"; };
 		A074E65F2BE92B7A006695BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,7 +58,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A01DCC582BEE813800394206 /* GoogleSignInSwift in Frameworks */,
 				A02DD72E2BEBE01E008A8893 /* FirebaseAuth in Frameworks */,
+				A01DCC562BEE813800394206 /* GoogleSignIn in Frameworks */,
 				A02DD7302BEBE01E008A8893 /* FirebaseFirestore in Frameworks */,
 				A02DD7322BEBE01E008A8893 /* FirebaseFirestoreSwift in Frameworks */,
 			);
@@ -79,17 +88,20 @@
 		A074E65C2BE92B7A006695BC /* TriviaGame */ = {
 			isa = PBXGroup;
 			children = (
-				A007220F2BED24E400D07287 /* DDBBView.swift */,
+				A01DCC5B2BEE825400394206 /* Info.plist */,
 				A007220D2BED224C00D07287 /* DDBBViewModel.swift */,
+				A007220F2BED24E400D07287 /* DDBBView.swift */,
 				A007220B2BED20C400D07287 /* DDBBModel.swift */,
 				A02DD7292BEBDC14008A8893 /* AuthViewModel.swift */,
 				A02DD7352BEBE462008A8893 /* SignUpView.swift */,
 				A00722052BED0E3600D07287 /* ResetPasswordView.swift */,
 				A02DD7332BEBE433008A8893 /* HolderAuthView.swift */,
+				A01DCC5C2BEE844100394206 /* AuthModel.swift */,
 				A074E66D2BE92DCC006695BC /* APIViewModel.swift */,
 				A074E66F2BE92DE3006695BC /* APIView.swift */,
 				A074E66B2BE92C5B006695BC /* APIModel.swift */,
-				A02DD7372BEBF23E008A8893 /* GoogleService-Info.plist */,
+				A01DCC592BEE820200394206 /* GoogleService-Info.plist */,
+				A02DD7372BEBF23E008A8893 /* GoogleService-Info-old.plist */,
 				A074E65D2BE92B7A006695BC /* TriviaGameApp.swift */,
 				A074E65F2BE92B7A006695BC /* ContentView.swift */,
 				A074E6612BE92B7E006695BC /* Assets.xcassets */,
@@ -126,6 +138,8 @@
 				A02DD72D2BEBE01E008A8893 /* FirebaseAuth */,
 				A02DD72F2BEBE01E008A8893 /* FirebaseFirestore */,
 				A02DD7312BEBE01E008A8893 /* FirebaseFirestoreSwift */,
+				A01DCC552BEE813800394206 /* GoogleSignIn */,
+				A01DCC572BEE813800394206 /* GoogleSignInSwift */,
 			);
 			productName = TriviaGame;
 			productReference = A074E65A2BE92B7A006695BC /* TriviaGame.app */;
@@ -157,6 +171,7 @@
 			mainGroup = A074E6512BE92B7A006695BC;
 			packageReferences = (
 				A02DD72C2BEBE01E008A8893 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				A01DCC542BEE813800394206 /* XCRemoteSwiftPackageReference "googleSignIn-iOS" */,
 			);
 			productRefGroup = A074E65B2BE92B7A006695BC /* Products */;
 			projectDirPath = "";
@@ -173,8 +188,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A074E6652BE92B7E006695BC /* Preview Assets.xcassets in Resources */,
+				A01DCC5A2BEE820200394206 /* GoogleService-Info.plist in Resources */,
 				A074E6622BE92B7E006695BC /* Assets.xcassets in Resources */,
-				A02DD7382BEBF23F008A8893 /* GoogleService-Info.plist in Resources */,
+				A02DD7382BEBF23F008A8893 /* GoogleService-Info-old.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +204,7 @@
 				A02DD72A2BEBDC14008A8893 /* AuthViewModel.swift in Sources */,
 				A007220C2BED20C400D07287 /* DDBBModel.swift in Sources */,
 				A074E66C2BE92C5B006695BC /* APIModel.swift in Sources */,
+				A01DCC5D2BEE844100394206 /* AuthModel.swift in Sources */,
 				A007220E2BED224C00D07287 /* DDBBViewModel.swift in Sources */,
 				A074E6702BE92DE3006695BC /* APIView.swift in Sources */,
 				A074E6602BE92B7A006695BC /* ContentView.swift in Sources */,
@@ -328,6 +345,7 @@
 				DEVELOPMENT_TEAM = YR38P66FTJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TriviaGame/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -357,6 +375,7 @@
 				DEVELOPMENT_TEAM = YR38P66FTJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TriviaGame/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -399,6 +418,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A01DCC542BEE813800394206 /* XCRemoteSwiftPackageReference "googleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/googleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		A02DD72C2BEBE01E008A8893 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -410,6 +437,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A01DCC552BEE813800394206 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A01DCC542BEE813800394206 /* XCRemoteSwiftPackageReference "googleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		A01DCC572BEE813800394206 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A01DCC542BEE813800394206 /* XCRemoteSwiftPackageReference "googleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
 		A02DD72D2BEBE01E008A8893 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A02DD72C2BEBE01E008A8893 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
