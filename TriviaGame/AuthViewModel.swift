@@ -75,7 +75,7 @@ final class AuthViewModel: ObservableObject {
         Auth.auth().sendPasswordReset(withEmail: emailAddress)
     }
     
-    //Fucntion to signIn with Google SDK
+    //Function to signIn with Google SDK
     func signInWithGoogle(){
         guard let clientID = FirebaseApp.app()?.options.clientID else {return}
         //Capturamos la configuración con unestro IDCliente
@@ -85,7 +85,8 @@ final class AuthViewModel: ObservableObject {
         GIDSignIn.sharedInstance.configuration = config
 
         //Cambiar a región España en el emulador para evitar errores en desfases de tiempo
-        //como no estamos en una vista, sino en un ViewModel, hemos creado Application_utility, donde creamos una pantalla o vista del tipo UIViewController, sino pondríamos self en el parámetro withPresenting.
+        /*como no estamos en una vista, sino en un ViewModel, hemos creado Application_utility, donde creamos una pantalla o vista del tipo UIViewController, sino pondríamos self en el parámetro withPresenting.
+         To see more detail see AuthModel() Bibliography*/
 
         GIDSignIn.sharedInstance.signIn(withPresenting: ApplicationUtility.rootViewController) {user,error in
             if let error = error {
