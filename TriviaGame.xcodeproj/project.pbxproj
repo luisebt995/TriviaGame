@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A00722062BED0E3600D07287 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00722052BED0E3600D07287 /* ResetPasswordView.swift */; };
+		A007220C2BED20C400D07287 /* DDBBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A007220B2BED20C400D07287 /* DDBBModel.swift */; };
+		A007220E2BED224C00D07287 /* DDBBViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A007220D2BED224C00D07287 /* DDBBViewModel.swift */; };
+		A00722102BED24E400D07287 /* DDBBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A007220F2BED24E400D07287 /* DDBBView.swift */; };
 		A02DD72A2BEBDC14008A8893 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02DD7292BEBDC14008A8893 /* AuthViewModel.swift */; };
 		A02DD72E2BEBE01E008A8893 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A02DD72D2BEBE01E008A8893 /* FirebaseAuth */; };
 		A02DD7302BEBE01E008A8893 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A02DD72F2BEBE01E008A8893 /* FirebaseFirestore */; };
@@ -26,6 +29,9 @@
 
 /* Begin PBXFileReference section */
 		A00722052BED0E3600D07287 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
+		A007220B2BED20C400D07287 /* DDBBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDBBModel.swift; sourceTree = "<group>"; };
+		A007220D2BED224C00D07287 /* DDBBViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDBBViewModel.swift; sourceTree = "<group>"; };
+		A007220F2BED24E400D07287 /* DDBBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDBBView.swift; sourceTree = "<group>"; };
 		A02DD7292BEBDC14008A8893 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		A02DD7332BEBE433008A8893 /* HolderAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolderAuthView.swift; sourceTree = "<group>"; };
 		A02DD7352BEBE462008A8893 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
@@ -73,13 +79,16 @@
 		A074E65C2BE92B7A006695BC /* TriviaGame */ = {
 			isa = PBXGroup;
 			children = (
+				A007220F2BED24E400D07287 /* DDBBView.swift */,
+				A007220D2BED224C00D07287 /* DDBBViewModel.swift */,
+				A007220B2BED20C400D07287 /* DDBBModel.swift */,
 				A02DD7292BEBDC14008A8893 /* AuthViewModel.swift */,
 				A02DD7352BEBE462008A8893 /* SignUpView.swift */,
 				A00722052BED0E3600D07287 /* ResetPasswordView.swift */,
 				A02DD7332BEBE433008A8893 /* HolderAuthView.swift */,
-				A074E66B2BE92C5B006695BC /* APIModel.swift */,
 				A074E66D2BE92DCC006695BC /* APIViewModel.swift */,
 				A074E66F2BE92DE3006695BC /* APIView.swift */,
+				A074E66B2BE92C5B006695BC /* APIModel.swift */,
 				A02DD7372BEBF23E008A8893 /* GoogleService-Info.plist */,
 				A074E65D2BE92B7A006695BC /* TriviaGameApp.swift */,
 				A074E65F2BE92B7A006695BC /* ContentView.swift */,
@@ -177,11 +186,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A02DD72A2BEBDC14008A8893 /* AuthViewModel.swift in Sources */,
+				A007220C2BED20C400D07287 /* DDBBModel.swift in Sources */,
 				A074E66C2BE92C5B006695BC /* APIModel.swift in Sources */,
+				A007220E2BED224C00D07287 /* DDBBViewModel.swift in Sources */,
 				A074E6702BE92DE3006695BC /* APIView.swift in Sources */,
 				A074E6602BE92B7A006695BC /* ContentView.swift in Sources */,
 				A02DD7362BEBE462008A8893 /* SignUpView.swift in Sources */,
 				A074E65E2BE92B7A006695BC /* TriviaGameApp.swift in Sources */,
+				A00722102BED24E400D07287 /* DDBBView.swift in Sources */,
 				A074E66E2BE92DCC006695BC /* APIViewModel.swift in Sources */,
 				A02DD7342BEBE433008A8893 /* HolderAuthView.swift in Sources */,
 				A00722062BED0E3600D07287 /* ResetPasswordView.swift in Sources */,
