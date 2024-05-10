@@ -9,18 +9,28 @@
 
 import SwiftUI
 import FirebaseFirestore
+import FirebaseAuth
 
 class DDBBViewModel: ObservableObject {
     
     @Published var userData:[UserData] = []
     @Published var selectedData : UserData?
     
-    private var databaseReference = Firestore.firestore().collection("UserData")
+    //Deprecated
+    //private var databaseReference = Firestore.firestore().collection("UserData")
+    
+    //Ner reference to DDBB, to all reference of 'databaseReference' add ? ---> databaseReference?.document ...
+    private lazy var databaseReference: CollectionReference? = {
+        guard let user = Auth.auth().currentUser?.uid else
+        {return nil}
+        let ref = Firestore.firestore().collection("UserData").document(user).collection("WLR")
+        return ref
+    }()
 
     //Function to post data
     func addData(corrects: Int, incorrects: Int, ratio: Double) {
         do {
-            _ = try databaseReference.addDocument(from: UserData(corrects: corrects, incorrects: incorrects, ratio: ratio))
+            _ = try databaseReference?.addDocument(from: UserData(corrects: corrects, incorrects: incorrects, ratio: ratio))
         }
         catch {
             print(error.localizedDescription)
@@ -29,7 +39,7 @@ class DDBBViewModel: ObservableObject {
 
     //Function to read data
     func fetchData() {
-        databaseReference.addSnapshotListener { (querySnapshot, error) in
+        databaseReference?.addSnapshotListener { (querySnapshot, error) in
             guard let documents = querySnapshot?.documents else {
                 print("No documents")
                 return
@@ -45,7 +55,11 @@ class DDBBViewModel: ObservableObject {
     //Function to update data
     func updateData() {
         if let userDataID = selectedData?.id {
-            databaseReference.document(userDataID).updateData(["corrects" : 0])
+            if let corrects = selectedData?.corrects{
+                databaseReference?.document(userDataID).updateData(["corrects" : corrects + 1])
+            } else {
+                databaseReference?.document(userDataID).updateData(["corrects" : 0])
+            }
         }
     }
     
@@ -55,7 +69,7 @@ class DDBBViewModel: ObservableObject {
     func deleteData(at indexSet: IndexSet) {
         indexSet.forEach { index in
             let userData = userData[index]
-            databaseReference.document(userData.id ?? "").delete { error in
+            databaseReference?.document(userData.id ?? "").delete { error in
                 if let error = error {
                     print("\(error.localizedDescription)")
                 } else {

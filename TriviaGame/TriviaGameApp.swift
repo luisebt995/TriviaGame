@@ -24,8 +24,8 @@ struct TriviaGameApp: App {
     
     var body: some Scene {
         WindowGroup {
-            DDBBView()
-            //HolderAuthView().environmentObject(AuthViewModel())
+            //DDBBView()
+            HolderAuthView().environmentObject(AuthViewModel())
         }
     }
 }

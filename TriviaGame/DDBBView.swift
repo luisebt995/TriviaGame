@@ -9,6 +9,10 @@ import SwiftUI
 
 struct DDBBView: View {
     
+    //Instance of AuthViewModel, used as EnvVar
+    @EnvironmentObject private var authModel: AuthViewModel
+    
+    //Instance of DDBBViewModel
     @ObservedObject private var ddbbViewModel = DDBBViewModel()
     
     //@Environment(\.dismiss) var dismiss
@@ -74,6 +78,16 @@ struct DDBBView: View {
                 .foregroundColor(.yellow)
             }.onAppear(perform: self.ddbbViewModel.fetchData)
                 .navigationTitle("Publish")
+                .navigationBarItems(
+                    leading:
+                    Button(action: {
+                        authModel.signOut()
+                    },label: {
+                        Image(systemName: "arrowshape.turn.up.left").font(.title)
+                        .foregroundColor(.black)
+                        
+                    })
+                )
                 .toolbar {
                     ToolbarItemGroup(placement:.destructiveAction) {
                         Button("Cancel") {

@@ -23,7 +23,8 @@ struct HolderAuthView: View {
                 SignUpView().environmentObject(authModel)
             }
             else {
-                APIView(dataGame: APIViewModel()).environmentObject(authModel)
+                DDBBView()
+                //APIView(dataGame: APIViewModel())
             }
         }
         .onAppear {authModel.listenToAuthState()}

@@ -12,7 +12,7 @@ import SwiftUI
 
 /*New user registration UI*/
 struct SignUpView: View {
-    
+    //Instance of AuthViewModel, used as EnvVar
     @EnvironmentObject private var authModel: AuthViewModel
     
     //Recieve input from user and send it to AuthViewModel() functions
