@@ -19,12 +19,11 @@ struct APIView: View {
     
     //Control modal View
     @State private var showingSheet = false
+    @State private var answer = ""
     
     var body: some View {
         NavigationView {
             List {
-                Spacer()
-                
                 //Text with question
                 Text(dataGame.questionOut)
                 //Text with category
@@ -32,35 +31,75 @@ struct APIView: View {
                 
                 Spacer()
                 
-                //Text with answers
-                Text(dataGame.correct_answerOut)
-                ForEach(dataGame.incorrect_answersOut, id:\.self){ incorrect in
-                    Text(incorrect)
+                //Texts with answers, using random distribution.
+                switch dataGame.typeOut {
+                case "multiple":
+                    if dataGame.incorrect_answersOut[0] != "" {
+                        ForEach(0..<4) { i in
+                            if  i == 3 {
+                                if dataGame.randomOrder == 3 {
+                                Text(dataGame.correct_answerOut)
+                                    .onTapGesture {
+                                        answer = "correct"
+                                    }
+                                }
+                            } else {
+                                if dataGame.randomOrder == i {
+                                    Text(dataGame.correct_answerOut)
+                                        .onTapGesture {
+                                            answer = "correct"
+                                        }
+                                }
+                                Text(dataGame.incorrect_answersOut[i])
+                                    .onTapGesture {
+                                        answer = "incorrect"
+                                    }
+                            }
+                        }
+                    }
+                case "boolean":
+                    if  dataGame.randomOrder == 0 {
+                        Text(dataGame.correct_answerOut)
+                            .onTapGesture {
+                                answer = "correct"
+                            }
+                        Text(dataGame.incorrect_answersOut[0])
+                            .onTapGesture {
+                                answer = "incorrect"
+                            }
+                    } else {
+                        Text(dataGame.incorrect_answersOut[0])
+                            .onTapGesture {
+                                answer = "incorrect"
+                            }
+                        Text(dataGame.correct_answerOut)
+                            .onTapGesture {
+                                answer = "correct"
+                            }
+                    }
+                default:
+                    Text("")
                 }
                 
-                Spacer()
+                //Debug
+                Text(answer)
                 
-                HStack{
-                    Spacer()
-                    
-                    //Calls information from API
-                    Button(action: {
-                        dataGame.urlCall()
-                    }) {
-                        Text("Generate")
-                    }
-                    
-                    Spacer()
-                    
-                    //Cycle through the questions
-                    Button(action: {
-                        dataGame.nextQuestion()
-                    }) {
-                        Text("Next")
-                    }
-                    
-                    Spacer()
+                //Calls information from API
+                Button(action: {
+                    dataGame.urlCall()
+                    answer = ""
+                }) {
+                    Text("Generate")
                 }
+                
+                //Cycle through the questions
+                Button(action: {
+                    dataGame.nextQuestion()
+                    answer = ""
+                }) {
+                    Text("Next")
+                }
+                
             }.navigationBarItems(
                 leading:
                 Button(action: {
