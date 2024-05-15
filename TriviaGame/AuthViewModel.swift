@@ -7,17 +7,48 @@
 //  Bibliography:
 //  Swift UI Firebase - Chapter 4
 //  https://firebase.google.com/docs/auth/ios/google-signin?hl=es
+//  https://firebase.google.com/docs/auth/ios/manage-users
 
 import SwiftUI
 import FirebaseAuth
 import FirebaseFirestore
 import FirebaseCore
 import GoogleSignIn
+import Combine
 
 
 /*Manage all authentification attr and func*/
 final class AuthViewModel: ObservableObject {
     @Published var user: User?
+    
+    //Input
+    @Published var updateDisplay = false
+    
+    //Output
+    @Published var displayNameView : String = ""
+    @Published var photoURLView : String = ""
+    
+    private var cancellableSet : Set<AnyCancellable> = []
+    
+    //Mantain updated the displayName and photoURL
+    init(){
+        $updateDisplay
+            .receive(on: RunLoop.main)
+            .map { _ in
+                return self.getDisplayName()
+            }
+            .assign(to: \.displayNameView, on: self)
+            .store(in: &cancellableSet)
+        $updateDisplay
+            .receive(on: RunLoop.main)
+            .map { _ in
+                return self.getPhotoURL()
+            }
+            .assign(to: \.photoURLView, on: self)
+            .store(in: &cancellableSet)
+        
+        self.updateDisplay.toggle()
+    }
     
     //Keep track of previous User information for persistance.
     func listenToAuthState() {
@@ -113,6 +144,56 @@ final class AuthViewModel: ObservableObject {
         }
     }
     
+    //Getter for displayName from user attributes.
+    func getDisplayName() -> String {
+        let userInfo = Auth.auth().currentUser
+        if let user = userInfo {
+            if let displayName = user.displayName{
+                return(displayName)
+            }
+            else {
+                    return("")
+            }
+        }
+        else {
+            return("")
+        }
+    }
+    
+    //Getter for photoURL from user attributes.
+    func getPhotoURL() -> String {
+        let userInfo = Auth.auth().currentUser
+        if let user = userInfo {
+            if let photoURL = user.photoURL{
+                return(photoURL.absoluteString)
+            }
+            else {
+                    return("")
+            }
+        }
+        else {
+            return("")
+        }
+    }
+    
+    //Setter for displayName from user attributes.
+    func setDisplayName(displayName: String) {
+        let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+        changeRequest?.displayName = displayName
+        changeRequest?.commitChanges()
+    }
+    
+    //Setter for photoURL from user attributes.
+    func setPhotoURL(photoURL: String) {
+        let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+        changeRequest?.photoURL = URL(string: photoURL)
+        changeRequest?.commitChanges()
+    }
+    
+    //Update information on init()
+    func update() {
+        self.updateDisplay.toggle()
+    }
     /*
      Old functions
      

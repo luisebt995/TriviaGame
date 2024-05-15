@@ -66,7 +66,7 @@ struct SignUpView: View {
                             
                         }
                         .sheet(isPresented: $showingSheet) {
-                            ResetPasswordView().environmentObject(authModel)
+                            ResetPasswordView()
                         }
                     }
                 }
