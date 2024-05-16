@@ -22,7 +22,7 @@ struct CustomView: View {
     
     //Timer for update
     @State private var countDown = 0
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    let timer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
     
     var body: some View {
         VStack {
@@ -77,14 +77,14 @@ struct CustomView: View {
             Button(action: {
                 authModel.setDisplayName(displayName: displayName)
                 authModel.setPhotoURL(photoURL: photoURL)
+                countDown = 0
             }) {
                 Text("Save Changes")
             }
             //Timer for update
             .onReceive(timer) {_ in
-                if countDown == 3 {
+                if countDown == 4 {
                     authModel.update()
-                    
                 }
                 else {
                     countDown += 1
@@ -102,6 +102,7 @@ struct CustomView: View {
                 Spacer()
                 VStack {
                     Button(action: {
+                        authModel.update()
                         self.presentationMode.wrappedValue.dismiss()
                     }, label: {
                         Image(systemName: "chevron.down.circle.fill")

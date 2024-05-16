@@ -51,29 +51,32 @@ class APIViewModel : ObservableObject {
             .assign(to: \.questionsReady, on: self)
             .store(in: &cancellableSet)
         
-        //Assign value from API to incorrect_answersOut
-        $index
-            .receive(on: RunLoop.main)
-            .map { index in
-                if let incorrect_answer = self.questionsReady?.results[index].incorrect_answers {
-                    return incorrect_answer
-                }
-                else{ return [""]}
-            }
-            .assign(to: \.incorrect_answersOut, on: self)
-            .store(in: &cancellableSet)
-        
         //Assign value from API to typeOut
         $index
             .receive(on: RunLoop.main)
             .map { index in
                 if let type = self.questionsReady?.results[index].type {
                     //Use .decoded to decode from HTML format
-                    return type
+                    return type.decoded
                 }
                 else{ return ""}
             }
             .assign(to: \.typeOut, on: self)
+            .store(in: &cancellableSet)
+        
+        //Assign value from API to incorrect_answersOut
+        $index
+            .receive(on: RunLoop.main)
+            .map { index in
+                if var incorrect_answer = self.questionsReady?.results[index].incorrect_answers {
+                    for i in 0..<incorrect_answer.count {
+                        incorrect_answer[i] = incorrect_answer[i].decoded
+                    }
+                    return incorrect_answer
+                }
+                else{ return [""]}
+            }
+            .assign(to: \.incorrect_answersOut, on: self)
             .store(in: &cancellableSet)
         
         //Assign value from API to questionOut
@@ -106,7 +109,7 @@ class APIViewModel : ObservableObject {
             .receive(on: RunLoop.main)
             .map { index in
                 if let correct_answer = self.questionsReady?.results[index].correct_answer {
-                    return correct_answer
+                    return correct_answer.decoded
                 }
                 else{ return ""}
             }
