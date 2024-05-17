@@ -23,6 +23,9 @@ struct APIView: View {
     //Maintain flow with answers and next button
     @State private var flowControl = false
     
+    //NavigationLink to other views
+    @State private var goToResultView = false
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -153,13 +156,25 @@ struct APIView: View {
                     Spacer()
                     
                     //Cycle through the questions
-                    Button(""){
-                        dataGame.nextQuestion()
-                        flowControl = false
-                        answerControl = -1
+                    ZStack {
+                        NavigationLink(destination: ResultView(), isActive: $goToResultView)
+                        {
+                            EmptyView()
+                        }
+                        Button((dataGame.index < dataGame.amount-1) ? "Next" : "Result"){
+                            if (dataGame.index < dataGame.amount-1) {
+                                dataGame.nextQuestion()
+                                flowControl = false
+                                answerControl = -1
+                            }
+                            else {
+                                goToResultView = true
+                            }
+                        }
+                        .buttonStyle(NextButtonStyle())
+                        .opacity(flowControl ? 1 : 0)
+                        .disabled(!flowControl)
                     }
-                    .buttonStyle(NextButtonStyle(flowControl: $flowControl))
-                    .disabled(!flowControl)
                 }
             }
             //Make VStack fill whole screen and apply gradient color

@@ -75,19 +75,12 @@ struct NextButtonStyle : ButtonStyle {
     /*Animation variable
     @State private var animation = false*/
     
-    //Control flow variable
-    @Binding var flowControl : Bool
-    
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .padding(.horizontal, 70)
             .padding(.vertical, 10)
             .background(
                 ZStack {
-                    Text("Next")
-                        .frame(alignment: .center)
-                        .foregroundColor(.white)
-                        .zIndex(2)
                     Rectangle()
                         .frame(width: 100, height: 35)
                         .foregroundColor(.blue)
@@ -98,7 +91,6 @@ struct NextButtonStyle : ButtonStyle {
                         .foregroundColor(.gray)
                         .cornerRadius(10)
                 }
-                    .opacity(flowControl ? 1 : 0)
                     /*.onTapGesture {
                         flowControl = false
                     }*/
