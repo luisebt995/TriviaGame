@@ -24,7 +24,8 @@ struct HolderAuthView: View {
             }
             else {
                 //DDBBView()
-                APIView(dataGame: APIViewModel())
+                //APIView(dataGame: APIViewModel())
+                MainMenuView()
             }
         }
         .onAppear {authModel.listenToAuthState()}

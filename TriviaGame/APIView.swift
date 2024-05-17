@@ -17,13 +17,6 @@ struct APIView: View {
     //Instance of APIViewModel
     @ObservedObject var dataGame : APIViewModel
     
-    //Control modal View
-    @State private var showingSheet = false
-    @State private var showingCustom = false
-    
-    //Show result of question
-    @State private var answer = ""
-    
     //Keep index of selected wrong answer
     @State private var answerControl = -1
     
@@ -80,9 +73,7 @@ struct APIView: View {
                                 if  i == 3 {
                                     if dataGame.randomOrder == 3 {
                                         Button(dataGame.correct_answerOut){
-                                            print("Button pressed")
                                             if !flowControl {
-                                                answer = "correct"
                                                 flowControl = true
                                             }
                                         }
@@ -93,9 +84,7 @@ struct APIView: View {
                                 } else {
                                     if dataGame.randomOrder == i {
                                         Button(dataGame.correct_answerOut){
-                                            print("Button pressed")
                                             if !flowControl {
-                                                answer = "correct"
                                                 flowControl = true
                                             }
                                         }
@@ -104,9 +93,7 @@ struct APIView: View {
                                         .listRowSeparator(.hidden)
                                     }
                                     Button(dataGame.incorrect_answersOut[i]){
-                                        print("Button pressed")
                                         if !flowControl {
-                                            answer = "incorrect"
                                             flowControl = true
                                             answerControl = i
                                         }
@@ -119,9 +106,7 @@ struct APIView: View {
                     case "boolean":
                         if  dataGame.randomOrder == 0 {
                             Button(dataGame.correct_answerOut){
-                                print("Button pressed")
                                 if !flowControl {
-                                    answer = "correct"
                                     flowControl = true
                                 }
                             }
@@ -129,9 +114,7 @@ struct APIView: View {
                             .buttonStyle(AnswerButtonStyle(typeAnswer: true, answerNum: -1 , answerControl: $answerControl, flowControl: $flowControl))
                             .listRowSeparator(.hidden)
                             Button(dataGame.incorrect_answersOut[0]){
-                                print("Button pressed")
                                 if !flowControl {
-                                    answer = "incorrect"
                                     flowControl = true
                                     answerControl = 0
                                 }
@@ -140,9 +123,7 @@ struct APIView: View {
                             .listRowSeparator(.hidden)
                         } else {
                             Button(dataGame.incorrect_answersOut[0]){
-                                print("Button pressed")
                                 if !flowControl {
-                                    answer = "incorrect"
                                     flowControl = true
                                     answerControl = 0
                                 }
@@ -150,9 +131,7 @@ struct APIView: View {
                             .buttonStyle(AnswerButtonStyle(typeAnswer: false, answerNum: 0 , answerControl: $answerControl, flowControl: $flowControl))
                             .listRowSeparator(.hidden)
                             Button(dataGame.correct_answerOut){
-                                print("Button pressed")
                                 if !flowControl {
-                                    answer = "correct"
                                     flowControl = true
                                 }
                             }
@@ -171,51 +150,17 @@ struct APIView: View {
                 .cornerRadius(10)
                 
                 HStack{
-                    Button(action: {
-                        dataGame.urlCall()
-                        answer = ""
-                    }) {
-                        Text("Generate")
-                    }
-                    .padding(10)
-                    
                     Spacer()
                     
                     //Cycle through the questions
                     Button(""){
-                        print("Button pressed")
                         dataGame.nextQuestion()
-                        answer = ""
                         flowControl = false
                         answerControl = -1
                     }
                     .buttonStyle(NextButtonStyle(flowControl: $flowControl))
                     .disabled(!flowControl)
                 }
-                
-                //Sign Out of User session.
-                .navigationBarItems(
-                    leading:
-                    Button(action: {
-                        authModel.signOut()
-                    },label: {
-                        Image(systemName: "arrowshape.turn.up.left").font(.title)
-                        .foregroundColor(.black)
-                        
-                    }),
-                    //Modal to CustomView.
-                    trailing:
-                    Button(action: {
-                        showingCustom.toggle()
-                    },label: {
-                        Image(systemName: "gear").font(.title)
-                        .foregroundColor(.black)
-                        
-                    })
-                    .sheet(isPresented: $showingCustom) {
-                        CustomView()
-                }
-                )
             }
             //Make VStack fill whole screen and apply gradient color
             .frame(
@@ -230,6 +175,8 @@ struct APIView: View {
             )
         }
         .onAppear{authModel.update()}
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
     }
 }
 
