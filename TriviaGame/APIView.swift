@@ -26,6 +26,8 @@ struct APIView: View {
     //NavigationLink to other views
     @State private var goToResultView = false
     
+    @State var corrects = 0
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -78,6 +80,7 @@ struct APIView: View {
                                         Button(dataGame.correct_answerOut){
                                             if !flowControl {
                                                 flowControl = true
+                                                corrects += 1
                                             }
                                         }
                                         .frame(alignment: .center)
@@ -89,6 +92,7 @@ struct APIView: View {
                                         Button(dataGame.correct_answerOut){
                                             if !flowControl {
                                                 flowControl = true
+                                                corrects += 1
                                             }
                                         }
                                         .frame(alignment: .center)
@@ -111,6 +115,7 @@ struct APIView: View {
                             Button(dataGame.correct_answerOut){
                                 if !flowControl {
                                     flowControl = true
+                                    corrects += 1
                                 }
                             }
                             .frame(alignment: .center)
@@ -136,6 +141,7 @@ struct APIView: View {
                             Button(dataGame.correct_answerOut){
                                 if !flowControl {
                                     flowControl = true
+                                    corrects += 1
                                 }
                             }
                             .frame(alignment: .center)
@@ -157,7 +163,7 @@ struct APIView: View {
                     
                     //Cycle through the questions
                     ZStack {
-                        NavigationLink(destination: ResultView(), isActive: $goToResultView)
+                        NavigationLink(destination: ResultView(corrects: corrects, amount: dataGame.amount), isActive: $goToResultView)
                         {
                             EmptyView()
                         }
@@ -189,7 +195,10 @@ struct APIView: View {
                 LinearGradient(gradient: Gradient(colors: [.cyan, .white]), startPoint: .top, endPoint: .bottom)
             )
         }
-        .onAppear{authModel.update()}
+        .onAppear{
+            authModel.update()
+            corrects = 0
+        }
         .navigationBarTitle("")
         .navigationBarHidden(true)
     }

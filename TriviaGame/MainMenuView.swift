@@ -144,6 +144,8 @@ struct MainMenuView: View {
             )
         }
         .onAppear{authModel.update()}
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
     }
 }
 

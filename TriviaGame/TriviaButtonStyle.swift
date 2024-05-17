@@ -107,3 +107,41 @@ struct NextButtonStyle : ButtonStyle {
             )
     }
 }
+
+//ButtonStyle for continue selection Button
+struct ContinueButtonStyle : ButtonStyle {
+    /*Animation variable
+    @State private var animation = false*/
+    
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .padding(.horizontal, 70)
+            .padding(.vertical, 10)
+            .background(
+                ZStack {
+                    Rectangle()
+                        .frame(width: 100, height: 35)
+                        .foregroundColor(.yellow)
+                        .cornerRadius(10)
+                        .zIndex(1)
+                    Rectangle()
+                        .frame(width: 105, height: 40)
+                        .foregroundColor(.gray)
+                        .cornerRadius(10)
+                }
+                    /*.onTapGesture {
+                        flowControl = false
+                    }*/
+                    /*.scaleEffect(animation ? 0.8 : 1.0)
+                    .onTapGesture {
+                       withAnimation(Animation.spring()) {
+                            self.animation.toggle()
+                            
+                        }
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                            self.animation.toggle()
+                        }
+                    }*/
+            )
+    }
+}
