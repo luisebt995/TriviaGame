@@ -17,6 +17,4 @@ struct UserData: Codable {
     //Keep track score player
     var corrects: Int?
     var incorrects: Int?
-    var ratio: Double?
-    
 }

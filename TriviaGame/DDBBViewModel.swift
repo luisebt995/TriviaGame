@@ -29,9 +29,9 @@ class DDBBViewModel: ObservableObject {
     }()
 
     //Function to post data
-    func addData(corrects: Int, incorrects: Int, ratio: Double) {
+    func addData(corrects: Int, incorrects: Int) {
         do {
-            _ = try databaseReference?.addDocument(from: UserData(corrects: corrects, incorrects: incorrects, ratio: ratio))
+            _ = try databaseReference?.addDocument(from: UserData(corrects: corrects, incorrects: incorrects))
         }
         catch {
             print(error.localizedDescription)

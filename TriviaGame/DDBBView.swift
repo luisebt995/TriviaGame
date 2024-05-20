@@ -22,7 +22,6 @@ struct DDBBView: View {
     
     @State var corrects = 0
     @State var incorrects = 0
-    @State var ratio = 0.0
     
     //Playground view to test DDBB connection
     var body: some View {
@@ -34,12 +33,8 @@ struct DDBBView: View {
                 TextField("incorrects", value: $incorrects, format: .number)
                     .textFieldStyle(.roundedBorder)
                     .padding()
-                TextField("ratio", value: $ratio, format: .number)
-                    .textFieldStyle(.roundedBorder)
-                    .padding()
                 Text("corrects \(corrects)")
                 Text("incorrects \(incorrects)")
-                Text("ratio \(ratio)")
                 ForEach(ddbbViewModel.userData, id:\.id) { Data in
                     VStack(alignment: .leading) {
                         if let x = Data.corrects {
@@ -50,10 +45,6 @@ struct DDBBView: View {
                             Text(String(x))
                                 .font(.system(size: 22, weight: .regular))
                         }
-                        if let x = Data.ratio {
-                            Text(String(x))
-                                .font(.system(size: 22, weight: .regular))
-                        }
                     }.frame(maxHeight: 200)
                         .onTapGesture {ddbbViewModel.selectedData = Data}
                 }.onDelete { (indexSet) in
@@ -61,7 +52,7 @@ struct DDBBView: View {
                     //rViewModel.restaurants.remove(atOffsets: indexSet)
                 }
                 Button(action: {
-                    self.ddbbViewModel.addData(corrects: corrects, incorrects: incorrects, ratio: ratio)
+                    self.ddbbViewModel.addData(corrects: corrects, incorrects: incorrects)
                     //dismiss()
                     
                 })

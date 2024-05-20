@@ -80,7 +80,7 @@ final class AuthViewModel: ObservableObject {
                 guard let uid = Auth.auth().currentUser?.uid
                 else { return }
                 do {
-                    _ = try Firestore.firestore().collection("UserData").document(uid).collection("WLR").addDocument(from: UserData(corrects: 0, incorrects: 0, ratio: 0))
+                    _ = try Firestore.firestore().collection("UserData").document(uid).collection("WLR").addDocument(from: UserData(corrects: 0, incorrects: 0))
                 }
                 catch {
                     print(error.localizedDescription)
@@ -140,6 +140,8 @@ final class AuthViewModel: ObservableObject {
                 }
                 guard let user = res?.user else {return}
                 print("USUARIO dentro de SignIn: \(user)")
+                
+                //TODO: Create new register in firebase when user sign in through Google
             }
         }
     }

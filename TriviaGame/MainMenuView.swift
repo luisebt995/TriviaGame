@@ -143,7 +143,12 @@ struct MainMenuView: View {
                 LinearGradient(gradient: Gradient(colors: [.cyan, .white]), startPoint: .top, endPoint: .bottom)
             )
         }
-        .onAppear{authModel.update()}
+        .onAppear{
+            authModel.update()
+            if (authModel.displayNameView == "" || authModel.photoURLView == ""){
+                showingCustom.toggle()
+            }
+        }
         .navigationBarTitle("")
         .navigationBarHidden(true)
     }
